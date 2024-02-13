@@ -1,0 +1,108 @@
+.counter {
+    display: table;
+    float: right;
+    clear: both;
+}
+
+.counter p {
+    float: left;
+    padding: 0 15px;
+}
+
+.line {
+    clear: both;
+}
+
+.postBtn {
+    margin: 0px 0px 0 0;
+    float: right;
+}
+
+.listOfGames {
+    margin: 20px auto 50px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(calc(90% / 4), 1fr));
+    clear: both;
+}
+
+.listOfGames .item {
+    display: grid;
+    height: 150px;
+    grid-template-columns: 15% auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "selected details details";
+    background-color: #eee;
+    overflow: hidden;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 0 0 0 2.5%;
+}
+
+.listOfGames .item .selected {
+    grid-area: selected;
+    align-items: center;
+}
+
+.listOfGames .item .selected input[type='checkbox'] {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.listOfGames .item .details {
+    grid-area: details;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.listOfGames .item .details .title {
+    font-size: 16px;
+    font-weight: bold;
+    flex: 1.5;
+    text-align: left;
+}
+
+.listOfGames .item .details .imgYear {
+    flex: 1;
+    text-align: center;
+    padding: 2.5px;
+}
+
+.listOfGames .item .details .year {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 2.5px 0;
+    flex: 1;
+}
+
+.listOfGames .item .details .imageBox {
+    max-height: 95px;
+    overflow: hidden;
+}
+
+.listOfGames .item .details .imageBox img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 960px) {
+    .listOfGames {
+        grid-template-columns: repeat(auto-fill, minmax(calc(90% / 2), 1fr));
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .listOfGames {
+        grid-template-columns: repeat(auto-fill, minmax(calc(90% / 1), 1fr));
+    }
+}

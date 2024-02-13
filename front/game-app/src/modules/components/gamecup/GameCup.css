@@ -1,0 +1,120 @@
+.listGameCup {
+    margin: 20px auto 50px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(calc(90% / 2), 1fr));
+    clear: both;
+}
+
+.listGameCup .item {
+    display: grid;
+    height: 80px;
+    grid-template-columns: 25% auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "selected details details";
+    background-color: #eee;
+    overflow: hidden;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 0 0 0 5%;
+}
+
+.listGameCup .item .selected {
+    grid-area: selected;
+    align-items: center;
+}
+
+.listGameCup .item .details {
+    grid-area: details;
+    color: #333;
+}
+
+.listGameCup .item .details .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.listGameCup .item .details .year {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 560px) {
+    .listGameCup {
+        grid-template-columns: repeat(auto-fill, minmax(calc(90% / 1), 1fr));
+    }
+}
+
+.matchTitle {
+    color: #333;
+    padding: 0px 0 10px 0;
+}
+
+.listOfMatchs {
+    margin: 20px auto 0px auto;
+}
+
+.listOfMatchs .row {
+    margin: 0px auto 20px auto;
+    clear: both;
+}
+
+.listOfMatchs .row .col {
+    min-width: 220px;
+}
+
+.listOfMatchs .row .col:nth-child(n+5) {
+    margin-top: 10px;
+}
+
+.listOfMatchs .row .col .details {
+    height: 70px;
+    background-color: #eee;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    color: #333;
+    text-align: center;
+}
+
+.listOfMatchs .row .col .details .title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+.listOfMatchs .row .col .details .text {
+    font-size: 14px;
+}
+
+.listOfMatchs .row .col .details .text img {
+    margin: -5px 0 0 0px;
+    display: inline;
+}
+
+@media screen and (max-width: 1200px) {
+    .listOfMatchs .row .col:nth-child(n+4) {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .listOfMatchs .row .col {
+        margin-top: 10px;
+    }
+
+    .listOfMatchs .row .col .details .title {
+        font-size: 12px;
+        font-weight: bold;
+        margin: 15px 0 0 0;
+    }
+
+    .listOfMatchs .row .col .details .text {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .listOfMatchs .row .col {
+        margin-bottom: 10px;
+    }
+}
